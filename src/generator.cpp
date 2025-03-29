@@ -29,6 +29,7 @@
 #include "../include/sudoku_io.h"
 #include <random>
 #include <bitset>
+#include <algorithm>
 
 using namespace std;
 
@@ -42,7 +43,7 @@ int** getEmptyBoard() {
 
 // Hint 1:  Implement a function to return shuffled vectors
 // Function to return a randomly shuffled vector from 1 to 9
-std::vector<int> getShuffledVector() {
+vector<int> getShuffledVector() {
     // TODO: Implement shuffling logic here
     /**
      * TODO:
@@ -54,9 +55,23 @@ std::vector<int> getShuffledVector() {
      *
      * @return std::vector<int> Shuffled numbers from 1 to 9.
      */
-    // Dummy implementation:
+
+    // Base vector that includes numbers 1 -> 9
+    vector<int> BaseVector = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    // This generates a random number using elements of the hardware and the Mersenne Twister
+    random_device rd;
+    mt19937 rng(rd());
+
+    // This shuffles the base vector into a random order based on the previous randomly generated number
+    shuffle(BaseVector.begin(), BaseVector.end(), rng);
+
+    // Returns the shuffled vector
+    return BaseVector;
+
+    // Dummy implementation (if needed) :
     // Temporary static return for testing
-    return {3, 1, 4, 2, 7, 6, 5, 9, 8};
+    // return {3, 1, 4, 2, 7, 6, 5, 9, 8};
 }
 
 
