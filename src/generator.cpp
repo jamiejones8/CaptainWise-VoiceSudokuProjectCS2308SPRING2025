@@ -59,7 +59,7 @@ vector<int> getShuffledVector() {
     // Base vector that includes numbers 1 -> 9
     vector<int> BaseVector = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-    // This generates a random number using elements of the hardware and the Mersenne Twister
+    // This generates a random number using elements of the hardware and the Mersenne Twister makes it into a sequence of numbers
     random_device rd;
     mt19937 rng(rd());
 
@@ -141,24 +141,28 @@ void fillBoardWithIndependentBox(int** BOARD) {
      * - Remaining cells should remain empty.
      */
 
-    // Dummy implementation:
-    // Temporary static fill based on the provided example
-    int staticBoard[9][9] = {
-        {1, 5, 6, 0, 0, 0, 0, 0, 0},
-        {2, 4, 7, 0, 0, 0, 0, 0, 0},
-        {8, 3, 9, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 1, 7, 4, 0, 0, 0},
-        {0, 0, 0, 6, 2, 8, 0, 0, 0},
-        {0, 0, 0, 5, 9, 3, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 1, 6, 7},
-        {0, 0, 0, 0, 0, 0, 2, 5, 8},
-        {0, 0, 0, 0, 0, 0, 3, 4, 9}
-    };
-    // Dummy implementation:
-    // Copy static board to the provided BOARD
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-            BOARD[i][j] = staticBoard[i][j];
+    // This block gets a random 1 -> 9 vector and iterates through it in order, assigning
+    // each value to a position in the upper left box.
+    const vector<int> upperLeft = getShuffledVector();
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            BOARD[i][j] = upperLeft[i * 3 + j];
+        }
+    }
+
+    // Same as above, but for the center instead
+    const vector<int> center = getShuffledVector();
+    for (int i = 3; i < 6; i++) {
+        for (int j = 3; j < 6; j++) {
+            BOARD[i][j] = center[(i - 3) * 3 + (j - 3)];
+        }
+    }
+
+    // Same as above, but for the bottom right
+    const vector<int> lowerRight = getShuffledVector();
+    for (int i = 6; i < 9; i++) {
+        for (int j = 6; j < 9; j++) {
+            BOARD[i][j] = lowerRight[(i - 6) * 3 + (j - 6)];
         }
     }
 }
