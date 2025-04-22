@@ -227,6 +227,29 @@ void deleteRandomItems(int** BOARD, const int& n) {
      * @param n The number of cells to delete (should be between 1 and 81).
      */
 
+    // Input validation
+    if (n < 1 || n > 81) {
+        cout << "Invalid input!" << endl;
+        return;
+    }
+
+    // Create a hardware based randomizer and limit the values returned to the index limits of the board
+    random_device rd;
+    mt19937 generator(rd());
+    uniform_int_distribution<int> distribution(0, 8);
+
+    int count = 0;
+    while (count <= n) {
+        int row = distribution(generator);
+        int col = distribution(generator);
+
+        if (BOARD[row][col] != 0) {
+            BOARD[row][col] = 0;
+            count++;
+        }
+    }
+
+
     // Dummy implementation: Set the first 3 rows to 0
     for (int r = 0; r < 3; r++) {
         for (int c = 0; c < 9; c++) {

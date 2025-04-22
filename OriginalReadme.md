@@ -63,12 +63,12 @@ You will find `TODO` comments in the following files:
    - **CPP File (`generator.cpp`)**
 
      - **`getShuffledVector()`**
-         - [ ] Implement logic to create a vector with numbers `1-9`.
-         - [ ] Shuffle the vector using `std::shuffle` and return it.
+         - [Y] Implement logic to create a vector with numbers `1-9`.
+         - [Y] Shuffle the vector using `std::shuffle` and return it.
 
      - **`fillBoardWithIndependentBox(int** BOARD)`**
-         - [ ] Fill the three diagonal 3x3 boxes (`(0,0)`, `(3,3)`, `(6,6)`) with unique shuffled numbers.
-         - [ ] Use `getShuffledVector()` to randomize the numbers in each box.
+         - [Y] Fill the three diagonal 3x3 boxes (`(0,0)`, `(3,3)`, `(6,6)`) with unique shuffled numbers.
+         - [Y] Use `getShuffledVector()` to randomize the numbers in each box.
 
      - **`deleteRandomItems(int** BOARD, const int& n)`**
          - [ ] Randomly select and clear `n` unique cells (set them to `0`).

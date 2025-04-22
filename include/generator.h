@@ -24,22 +24,37 @@
 #include <vector>
 
  /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function simply initializes a 9x9 board (2d array) full of zeros.
   */
 int** getEmptyBoard();
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function takes a base vector of
+  * {1, 2, 3, 4, 5, 6, 7, 8, 9} and shuffles it randomly, returning the result.
   */
 std::vector<int> getShuffledVector();
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function utilizes randomized vectors provided by getShuffledVector()
+  * to fill the top left, center, and bottom left boxes of our board created by getEmptyBoard().
   */
 void fillBoardWithIndependentBox(int** BOARD);
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function uses hardware based randomization to delete n number of items from the board (set them to 0)
+  * It validates n (0 < n < 82) and terminates if n is not within that range.
+  * It then deletes n items using the following process:
+  * 1. Navigate to a random location in the 2d array
+  * 2. Check if that location is already 0
+  * 3. If so, find a new location. If not, set the value to zero and increment the counter.
+  * 4. Terminate the while loop when count == n
+  *
+  * @param int** BOARD contains our solved board
+  * @param n is the number of items to be deleted
   */
 void deleteRandomItems(int** BOARD, const int& n);
 
