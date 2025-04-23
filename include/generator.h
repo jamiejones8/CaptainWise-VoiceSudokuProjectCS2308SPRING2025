@@ -59,7 +59,13 @@ void fillBoardWithIndependentBox(int** BOARD);
 void deleteRandomItems(int** BOARD, const int& n);
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * generateBoard() uses all previously defined functions in generator.cpp to initialize and empty board,
+  * fill the top left, center, and bottom left boxes, solve the board, and delete n random items in order
+  * to return a solvable puzzle.
+  *
+  * @param
+  * const int& empty_boxes tells the deletion function how many empty boxes the generated puzzle will have.
   */
 int** generateBoard(const int& empty_boxes);
 

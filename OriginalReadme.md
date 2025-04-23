@@ -71,15 +71,15 @@ You will find `TODO` comments in the following files:
          - [Y] Use `getShuffledVector()` to randomize the numbers in each box.
 
      - **`deleteRandomItems(int** BOARD, const int& n)`**
-         - [ ] Randomly select and clear `n` unique cells (set them to `0`).
-         - [ ] Ensure no cell is cleared more than once and validate that `n` is between `1-81`.
+         - [Y] Randomly select and clear `n` unique cells (set them to `0`).
+         - [Y] Ensure no cell is cleared more than once and validate that `n` is between `1-81`.
 
      - **`generateBoard(const int& empty_boxes)`**
-         - [ ] Initialize an empty board using `getEmptyBoard()`.
-         - [ ] Fill diagonal boxes using `fillBoardWithIndependentBox()`.
-         - [ ] Solve the filled board using a solving function from `sudoku.h`.
-         - [ ] Delete `empty_boxes` cells using `deleteRandomItems()`.
-         - [ ] Return the final Sudoku board.
+         - [Y] Initialize an empty board using `getEmptyBoard()`.
+         - [Y] Fill diagonal boxes using `fillBoardWithIndependentBox()`.
+         - [Y] Solve the filled board using a solving function from `sudoku.h`.
+         - [Y] Delete `empty_boxes` cells using `deleteRandomItems()`.
+         - [Y] Return the final Sudoku board.
 
 2. **`utils.cpp` / `utils.h`**
    - **Header File (`utils.h`)**

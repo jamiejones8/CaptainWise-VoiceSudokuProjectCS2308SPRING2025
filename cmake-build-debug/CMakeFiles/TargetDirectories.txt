@@ -1,0 +1,3 @@
+/Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/cmake-build-debug/CMakeFiles/SudokuProject.dir
+/Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/cmake-build-debug/CMakeFiles/rebuild_cache.dir
