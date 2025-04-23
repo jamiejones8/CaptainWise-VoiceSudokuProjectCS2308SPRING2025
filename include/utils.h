@@ -24,7 +24,15 @@
 using namespace std;
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function deallocates memory taken up by int** BOARD
+  * First, it checks if the board is already a null pointer, if so
+  * it returns and exits the function. If not, it starts by deallocating each row of BOARD
+  * and then deletes the outer array BOARD afterwards. Finally, it assigns BOARD the value of nullptr
+  * to complete the deallocation.
+  *
+  * @param BOARD passes the generated or solved board's memory location to the function
+  * in order to be deallocated.
   */
 void deallocateBoard(int** BOARD, const int& rows = 9);
 
