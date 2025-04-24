@@ -83,17 +83,17 @@ You will find `TODO` comments in the following files:
 
 2. **`utils.cpp` / `utils.h`**
    - **Header File (`utils.h`)**
-     - [ ] Provide function prototypes for all functions in `utility.cpp`.
-     - [ ] Add appropriate docstrings for each function prototype based on examples in the code.
+     - [Y] Provide function prototypes for all functions in `utility.cpp`.
+     - [Y] Add appropriate docstrings for each function prototype based on examples in the code.
 
    - **CPP File (`utils.cpp`)**
 
      - **`deallocateBoard(int** BOARD, const int& rows)`**
-         - [ ] Implement memory deallocation for the 2D `BOARD`.
-         - [ ] Check if `BOARD` is `nullptr` before deallocating.
-         - [ ] Iterate through each row and deallocate using `delete[]`.
-         - [ ] Deallocate the array of row pointers using `delete[]`.
-         - [ ] Set `BOARD` to `nullptr` to avoid dangling pointers.
+         - [Y] Implement memory deallocation for the 2D `BOARD`.
+         - [Y] Check if `BOARD` is `nullptr` before deallocating.
+         - [Y] Iterate through each row and deallocate using `delete[]`.
+         - [Y] Deallocate the array of row pointers using `delete[]`.
+         - [Y] Set `BOARD` to `nullptr` to avoid dangling pointers.
 
      - **`createFolder(const std::string& folderPath)`**
          - ✅ Already implemented — no changes needed.
@@ -126,10 +126,10 @@ You will find `TODO` comments in the following files:
          - Solves the Sudoku board using a simple backtracking algorithm.
 
      - **`findNextCell(int** BOARD)`**
-         - [ ] Implement logic to find the next empty cell using the Minimum Remaining Value (MRV) heuristic.
-         - [ ] Iterate over the board and count valid options for each empty cell using `isValid()`.
-         - [ ] Return the cell with the fewest valid options (`row`, `col`, `options`).
-         - [ ] Implement early exit if a cell with only one valid option is found.
+         - [Y] Implement logic to find the next empty cell using the Minimum Remaining Value (MRV) heuristic.
+         - [Y] Iterate over the board and count valid options for each empty cell using `isValid()`.
+         - [Y] Return the cell with the fewest valid options (`row`, `col`, `options`).
+         - [Y] Implement early exit if a cell with only one valid option is found.
 
      - **`solveBoardEfficient(int** BOARD)`**
          - [ ] Implement efficient Sudoku solving using backtracking combined with the MRV heuristic.

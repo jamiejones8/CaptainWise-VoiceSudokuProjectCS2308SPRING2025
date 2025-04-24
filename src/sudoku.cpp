@@ -131,6 +131,26 @@ tuple<int, int, int> findNextCell(int** BOARD) {
              * - Track the cell with the minimum number of options.
              * - Implement early exit if a cell with only one option is found.
              */
+
+            // Checks if the chosen cell is empty
+            if (BOARD[r][c] == 0) {
+
+                // Initializes a fresh counter for every empty cell
+                int counter = 0;
+
+                // Checks validity for each value 1-9 using the isValid() function and increments the counter
+                // if the function returns true
+                for (int k = 1; k <= 9; k++) {
+                    if (isValid(BOARD, r, c, k)) {
+                        counter++;
+                    }
+                }
+                // First checks if the counter is 1, if yes that cell is chosen to return later
+                if (counter == 1) {bestRow = r; bestCol = c;}
+
+                // If counter is not 1, minOptions is updated with the values pertaining to the new minimum cell
+                else if(counter < minOptions) {minOptions = counter; bestRow = r; bestCol = c;}
+            }
         }
     }
     return {bestRow, bestCol, minOptions};
@@ -157,6 +177,8 @@ bool solveBoardEfficient(int** BOARD)
      * @param BOARD A 9x9 Sudoku board to be solved.
      * @return true if the board is successfully solved, false otherwise.
      */
+
+
     return false; //temporary
 }
 
