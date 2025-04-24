@@ -132,15 +132,15 @@ You will find `TODO` comments in the following files:
          - [Y] Implement early exit if a cell with only one valid option is found.
 
      - **`solveBoardEfficient(int** BOARD)`**
-         - [ ] Implement efficient Sudoku solving using backtracking combined with the MRV heuristic.
-         - [ ] Use `findNextCell()` to select the next cell with the fewest valid options.
-         - [ ] Apply recursive backtracking to solve the board.
-         - [ ] Implement proper backtracking by resetting cells to `0` when needed.
+         - [Y] Implement efficient Sudoku solving using backtracking combined with the MRV heuristic.
+         - [Y] Use `findNextCell()` to select the next cell with the fewest valid options.
+         - [Y] Apply recursive backtracking to solve the board.
+         - [Y] Implement proper backtracking by resetting cells to `0` when needed.
 
      - **`solve(int** board, const bool& efficient)`**
-         - [ ] Implement logic to choose between the basic and efficient solver.
-         - [ ] Call `solveBoardEfficient()` if `efficient == true`.
-         - [ ] Otherwise, use the basic `solveBoard()` function.
+         - [Y] Implement logic to choose between the basic and efficient solver.
+         - [Y] Call `solveBoardEfficient()` if `efficient == true`.
+         - [Y] Otherwise, use the basic `solveBoard()` function.
 
 4. **`sudoku_io.cpp` / `sudoku_io.h`**
    - **Header File (`sudoku_io.h`)**

@@ -218,5 +218,7 @@ bool solve(int** board, const bool& efficient) {
      * - Else, return solveBoard(board, 0, 0).
      */
 
-    return solveBoard(board, 0, 0); // Temporary: Always calls basic solver
+    // Uses the efficient algo if efficient == true, uses default algo if not
+    if (efficient) {return solveBoardEfficient(board)}
+    else {return solveBoard(board, 0, 0);}
 }
