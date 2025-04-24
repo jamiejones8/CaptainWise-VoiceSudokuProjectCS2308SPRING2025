@@ -37,7 +37,8 @@ bool solveBoard(int** BOARD, const int& r=0, const int& c=0);
 
 
 /**
-  * TODO: Provide appropriate Documentation, see other examples provided within the projects
+  * @brief
+  * This function takes the board as input and iterates it over
   */
 std::tuple<int, int, int> findNextCell(int** BOARD);
 
