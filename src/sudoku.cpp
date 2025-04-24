@@ -178,8 +178,35 @@ bool solveBoardEfficient(int** BOARD)
      * @return true if the board is successfully solved, false otherwise.
      */
 
+    // Initializes an integer pair using findNextCell() function
+    // assigns the first and second return values of findNextCell
+    // (the row and column indexes of the next cell) to int variables
+    // row and col
+    pair<int, int> nextCell = findNextCell(BOARD);
+    int row = nextCell.first;
+    int col = nextCell.second;
 
-    return false; //temporary
+    // Check to see if the board is already completed (eg. no values changed when running findNextCell())
+    // and returns true to say that the board is solved.
+    if (row == -1 || col == -1){return true;}
+
+    // for loop that iterates through each possible value to check if it's valid, inserts it if true,
+    // and recurs until it finds an issue. If it finds a box with no possible values, it backtracks and tries again.
+    for (int k = 1; k <= 9; k++) {
+        if (isValid(BOARD, row, col, k)) {
+
+            // Inserting the approved value
+            BOARD[row][col] = k;
+
+            // Recursion triggers if an approved value is found
+            if (solveBoardEfficient(BOARD)) {return true;}
+
+            // Backtracking triggers if recursion does not (eg. no possible value is found for a given location)
+            BOARD[row][col] = 0;
+        }
+    }
+    // Trigger backtracking by returning false after returning the former location to empty (0 value)
+    return false;
 }
 
 
