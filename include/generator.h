@@ -40,6 +40,8 @@ std::vector<int> getShuffledVector();
   * @brief
   * This function utilizes randomized vectors provided by getShuffledVector()
   * to fill the top left, center, and bottom left boxes of our board created by getEmptyBoard().
+  *
+  * @param BOARD passes our 9x9 sudoku board.
   */
 void fillBoardWithIndependentBox(int** BOARD);
 
@@ -53,7 +55,7 @@ void fillBoardWithIndependentBox(int** BOARD);
   * 3. If so, find a new location. If not, set the value to zero and increment the counter.
   * 4. Terminate the while loop when count == n
   *
-  * @param int** BOARD contains our solved board
+  * @param BOARD contains our solved board
   * @param n is the number of items to be deleted
   */
 void deleteRandomItems(int** BOARD, const int& n);
@@ -64,8 +66,7 @@ void deleteRandomItems(int** BOARD, const int& n);
   * fill the top left, center, and bottom left boxes, solve the board, and delete n random items in order
   * to return a solvable puzzle.
   *
-  * @param
-  * const int& empty_boxes tells the deletion function how many empty boxes the generated puzzle will have.
+  * @param empty_boxes tells the deletion function how many empty boxes the generated puzzle will have.
   */
 int** generateBoard(const int& empty_boxes);
 
