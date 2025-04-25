@@ -189,7 +189,6 @@ void createAndSaveNPuzzles(const int& num_puzzles, const int& complexity_empty_b
         // Deallocate used memory after each iteration and set the value of BOARD to a null pointer
         // to avoid accessing freed memory.
         deallocateBoard(BOARD);
-        BOARD = nullptr;
     }
     cout << total_success << " files written out of " << num_puzzles <<endl;
 }
@@ -234,7 +233,6 @@ void solveAndSaveNPuzzles(const int &num_puzzles, const string& source, const st
 
         // Deallocate memory after each iteration and assign value of nullptr to int** sudoku
         deallocateBoard(sudoku);
-        sudoku = nullptr;
     }
 }
 
@@ -329,8 +327,6 @@ void compareSudokuSolvers(const int& experiment_size, const int& empty_boxes) {
         // and reassign them to null pointers.
         deallocateBoard(board1);
         deallocateBoard(board2);
-        board1 = nullptr;
-        board2 = nullptr;
     }
 
     cout << endl;  // Move to the next line after progress bar is done.

@@ -182,9 +182,9 @@ bool solveBoardEfficient(int** BOARD)
     // assigns the first and second return values of findNextCell
     // (the row and column indexes of the next cell) to int variables
     // row and col
-    pair<int, int> nextCell = findNextCell(BOARD);
-    int row = nextCell.first;
-    int col = nextCell.second;
+    tuple<int, int, int> nextCell = findNextCell(BOARD);
+    int row = get<0>(nextCell);
+    int col = get<1>(nextCell);
 
     // Check to see if the board is already completed (eg. no values changed when running findNextCell())
     // and returns true to say that the board is solved.
@@ -219,6 +219,6 @@ bool solve(int** board, const bool& efficient) {
      */
 
     // Uses the efficient algo if efficient == true, uses default algo if not
-    if (efficient) {return solveBoardEfficient(board)}
+    if (efficient) {return solveBoardEfficient(board);}
     else {return solveBoard(board, 0, 0);}
 }

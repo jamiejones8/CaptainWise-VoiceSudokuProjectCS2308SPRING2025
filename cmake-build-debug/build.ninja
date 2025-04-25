@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_SudokuProject: phony || .
 
 build CMakeFiles/SudokuProject.dir/main.cpp.o: CXX_COMPILER__SudokuProject_unscanned_Debug /Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/main.cpp || cmake_object_order_depends_target_SudokuProject
   DEP_FILE = CMakeFiles/SudokuProject.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   OBJECT_FILE_DIR = CMakeFiles/SudokuProject.dir
   TARGET_COMPILE_PDB = CMakeFiles/SudokuProject.dir/
@@ -59,7 +59,7 @@ build CMakeFiles/SudokuProject.dir/main.cpp.o: CXX_COMPILER__SudokuProject_unsca
 
 build CMakeFiles/SudokuProject.dir/src/sudoku.cpp.o: CXX_COMPILER__SudokuProject_unscanned_Debug /Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/src/sudoku.cpp || cmake_object_order_depends_target_SudokuProject
   DEP_FILE = CMakeFiles/SudokuProject.dir/src/sudoku.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   OBJECT_FILE_DIR = CMakeFiles/SudokuProject.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/SudokuProject.dir/
@@ -67,7 +67,7 @@ build CMakeFiles/SudokuProject.dir/src/sudoku.cpp.o: CXX_COMPILER__SudokuProject
 
 build CMakeFiles/SudokuProject.dir/src/sudoku_io.cpp.o: CXX_COMPILER__SudokuProject_unscanned_Debug /Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/src/sudoku_io.cpp || cmake_object_order_depends_target_SudokuProject
   DEP_FILE = CMakeFiles/SudokuProject.dir/src/sudoku_io.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   OBJECT_FILE_DIR = CMakeFiles/SudokuProject.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/SudokuProject.dir/
@@ -75,7 +75,7 @@ build CMakeFiles/SudokuProject.dir/src/sudoku_io.cpp.o: CXX_COMPILER__SudokuProj
 
 build CMakeFiles/SudokuProject.dir/src/generator.cpp.o: CXX_COMPILER__SudokuProject_unscanned_Debug /Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/src/generator.cpp || cmake_object_order_depends_target_SudokuProject
   DEP_FILE = CMakeFiles/SudokuProject.dir/src/generator.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   OBJECT_FILE_DIR = CMakeFiles/SudokuProject.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/SudokuProject.dir/
@@ -83,7 +83,7 @@ build CMakeFiles/SudokuProject.dir/src/generator.cpp.o: CXX_COMPILER__SudokuProj
 
 build CMakeFiles/SudokuProject.dir/src/utils.cpp.o: CXX_COMPILER__SudokuProject_unscanned_Debug /Users/jamiejones/CaptainWise-VoiceCS2308SPRING2025/src/utils.cpp || cmake_object_order_depends_target_SudokuProject
   DEP_FILE = CMakeFiles/SudokuProject.dir/src/utils.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   OBJECT_FILE_DIR = CMakeFiles/SudokuProject.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/SudokuProject.dir/
@@ -98,7 +98,7 @@ build CMakeFiles/SudokuProject.dir/src/utils.cpp.o: CXX_COMPILER__SudokuProject_
 # Link the executable SudokuProject
 
 build SudokuProject: CXX_EXECUTABLE_LINKER__SudokuProject_Debug CMakeFiles/SudokuProject.dir/main.cpp.o CMakeFiles/SudokuProject.dir/src/sudoku.cpp.o CMakeFiles/SudokuProject.dir/src/sudoku_io.cpp.o CMakeFiles/SudokuProject.dir/src/generator.cpp.o CMakeFiles/SudokuProject.dir/src/utils.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3
   OBJECT_DIR = CMakeFiles/SudokuProject.dir
   POST_BUILD = :
   PRE_LINK = :
