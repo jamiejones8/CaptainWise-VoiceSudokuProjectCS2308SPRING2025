@@ -248,14 +248,6 @@ void deleteRandomItems(int** BOARD, const int& n) {
             count++;
         }
     }
-
-
-    // Dummy implementation: Set the first 3 rows to 0
-    for (int r = 0; r < 3; r++) {
-        for (int c = 0; c < 9; c++) {
-            BOARD[r][c] = 0;
-        }
-    }
 }
 
 
